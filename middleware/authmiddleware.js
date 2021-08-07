@@ -21,18 +21,5 @@ const requireAuth = (req,res,next) => {
     }
 }
 
-// const checkUser = async (req,res) => {
-//     const token = req.cookie.jwt;
-//     jwt.verify(token,'sam secret',(err,decodedToken) => {
-//         if(err){
-//             console.log("fix me i am checkuser in middlewar")
-//         }else{
-//             console.log(decodedToken)
-//             const checkEmail = await pool.query(`SELECT * FROM users WHERE email = $1`,[decodedToken.email]);
-
-//             res.json(checkEmail);
-//         }
-//     })
-// }
 
 module.exports = {requireAuth}
